@@ -2,7 +2,7 @@ Rotten Tomatoes (raw)
 
 This is a movies app displaying box office and top rental DVDs using the Rotten Tomatoes API.
 
-Time spent: <Number of hours spent>
+Time spent: <6 hours>
 Features
 Required
 
@@ -22,7 +22,7 @@ Optional
     [ ] Customize the highlight and selection effect of the cell.
     [ ] Customize the navigation bar.
     
-record1.gif
+![Video Walkthrough](record1.gif)
 
 Credits
 
