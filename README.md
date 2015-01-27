@@ -22,7 +22,7 @@ Optional
     [ ] Customize the highlight and selection effect of the cell.
     [ ] Customize the navigation bar.
     
-    ![Video Walkthrough](record1.gif)
+record1.gif
 
 Credits
 
