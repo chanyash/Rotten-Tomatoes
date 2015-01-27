@@ -118,13 +118,17 @@
 
 - (void)onRefresh {
     
+    [SVProgressHUD show];
+    
     NSURL *url = [NSURL URLWithString:@"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?apikey=dagqdghwaq3e3mxyrp7kmmj5&limit=20&country=us"];
     
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:5];
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        
+        [SVProgressHUD dismiss];
+        
         if (connectionError) {
             [self.errorMsg setHidden:FALSE];
-            [SVProgressHUD dismiss];
             [self.refreshControl endRefreshing];
             return;
         }
